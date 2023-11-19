@@ -1,0 +1,56 @@
+﻿@model AuthorViewModel
+@{
+	ViewData["Title"] = "Tuxedo Books";
+}
+@if (TempData.Keys.Contains("message"))
+{
+	<h4 class="bg-success p-2">@TempData["message"]</h4>
+}
+
+<div>
+	<h2>Authors</h2>
+</div>
+<table class="table table-bordered table-striped">
+	<thead>
+		<tr class="text-white bg-dark">
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Edit</th>
+			<th>Delete</th>
+
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (Author author in Model.PageResult)
+		{
+			<tr>
+				<td>@author.FirstName</td>
+				<td>@author.LastName</td>
+				<td> <a asp-action="Edit" asp-route-id="@author.AuthorId"> Edit </a></td>
+				<td> <a asp-action="Delete" asp-route-id="@author.AuthorId"> Delete </a></td>
+
+
+			</tr>
+		}
+	</tbody>
+</table>
+<div class="text-center">
+	<pager asp-action="AuthorList" asp-controller="AuthorController" asp-route-page="@Model.PageResult.PageNumber" asp-route-pageSize="@Model.PageResult.PageSize" asp-route-totalItemCount="@Model.PageResult.TotalCount" id="authorPager">
+		<ul class="pagination">
+			<li class="page-item @((Model.PageResult.PageNumber == 1) ? "disabled" : "")">
+				<a class="page-link" href="@(Url.Page("/AuthorList", new { page = 1, pageSize = Model.PageResult.PageSize }))">1</a>
+			</li>
+			@for (int i = 2; i <= Model.PageResult.TotalPages; i++)
+			{
+				<li class="page-item @(Model.PageResult.PageNumber == i ? "active" : "")">
+					<a class="page-link" href="@(Url.Action("Index", "Author", new { page = i, pageSize = Model.PageResult.PageSize }))">@i</a>
+				</li>
+			}
+			<li class="page-item @((Model.PageResult.PageNumber == Model.PageResult.TotalPages) ? "disabled" : "")">
+				<a class="page-link" href="@(Url.Action("Index", "Author", new { page = Model.PageResult.PageNumber + 1, pageSize = Model.PageResult.PageSize }))">Next</a>
+			</li>
+		</ul>
+	</pager>
+</div>
+
