@@ -10,6 +10,15 @@
 <div>
 	<h2>Authors</h2>
 </div>
+
+<form method="get" action="@Url.Action("Index", "Author")">
+	<div class="form-group">
+		<label for="searchInput">Search by Author:</label>
+		<input type="text" class="form-control" id="searchInput" name="searchTerm" placeholder="Enter author name">
+	</div>
+	<button type="submit" class="btn btn-outline-primary">Search</button>
+</form>
+<br />
 <table class="table table-bordered table-striped">
 	<thead>
 		<tr class="text-white bg-dark">

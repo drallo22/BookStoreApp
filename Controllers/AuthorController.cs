@@ -12,13 +12,21 @@ namespace BookStoreApp.Controllers
 
 		public AuthorController(BookstoreContext ctx) => context = ctx;
 
-		public IActionResult Index(int page = 1, int pageSize = 5)
+		public IActionResult Index(int page = 1, int pageSize = 5, string searchTerm = "")
 		{
 			int skip = (page - 1) * pageSize;
-			
 
-			var authorsQuery = context.Authors.OrderBy(m => m.AuthorId);
-			
+			var authorsQuery = context.Authors.AsQueryable();
+
+			if (!string.IsNullOrEmpty(searchTerm))
+			{
+				// Apply search filter
+				authorsQuery = authorsQuery
+					.Where(a => EF.Functions.Like(a.FirstName, $"%{searchTerm}%") || EF.Functions.Like(a.LastName, $"%{searchTerm}%"));
+			}
+
+			authorsQuery = authorsQuery.OrderBy(m => m.AuthorId);
+
 			var totalCount = authorsQuery.Count();
 			var authors = authorsQuery.Skip(skip).Take(pageSize).ToList();
 
@@ -33,11 +41,11 @@ namespace BookStoreApp.Controllers
 			var viewModel = new AuthorViewModel
 			{
 				PageResult = pagedList,
-				
 			};
 
 			return View(viewModel);
 		}
+
 
 		[HttpGet]
 		public IActionResult Edit(int id)
