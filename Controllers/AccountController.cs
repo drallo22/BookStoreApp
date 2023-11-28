@@ -1,6 +1,7 @@
 ﻿using BookStoreApp.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace BookStoreApp.Controllers
 {
@@ -10,11 +11,14 @@ namespace BookStoreApp.Controllers
             private UserManager<User> userManager;
             private SignInManager<User> signInManager;
 
-            public AccountController(UserManager<User> userMngr,
-                SignInManager<User> signInMngr)
+		private BookstoreContext context { get; set; }
+
+		public AccountController(UserManager<User> userMngr,
+                SignInManager<User> signInMngr, BookstoreContext cxt)
             {
                 userManager = userMngr;
                 signInManager = signInMngr;
+                context = cxt;
             }
 
         // The Register(), LogIn(), and LogOut()methods go here
@@ -89,9 +93,41 @@ namespace BookStoreApp.Controllers
             return RedirectToAction("Index", "Book");
         }
 
-      
-      
+        [HttpGet]
+        public IActionResult ChangePassword()
+        {
+            return View();
+        }
 
+        [HttpPost]
+        public async Task<IActionResult> ChangePassword(
+        String username, String newPassword)
+        {
+            var user = await userManager.FindByNameAsync(username);
+
+            if (user == null)
+            {
+                // Handle the case where the user is not found
+                return NotFound();
+            }
+
+            // Generate a password reset token
+            var token = await userManager.GeneratePasswordResetTokenAsync(user);
+
+            // Reset the password using the token
+            var result = await userManager.ResetPasswordAsync(user, token, newPassword);
+
+            if (result.Succeeded)
+            {
+                // Password reset successful
+                return RedirectToAction("LogIn");
+            }
+            else
+            {
+                // Handle the case where the password reset fails
+                return View("Error");
+            }
+        }
 
 
 
