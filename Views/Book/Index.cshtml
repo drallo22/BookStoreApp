@@ -33,7 +33,8 @@
 			<th>Author(s)</th>
 			<th>Genre</th>
 			<th>Price</th>
-			<th></th>
+			<th>Edit</th>
+			<th>Add to Cart</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -44,6 +45,10 @@
 				<td>@book.authorObject.FirstName @book.authorObject.LastName</td>
 				<td>@book.Genre.Name</td>
 				<td>$@book.Price</td>
+				<td>
+					<a asp-controller="Book" asp-action="Edit" asp-route-id="@book.ISBN" class="btn btn-primary"> Edit </a>
+					
+				</td>
 				<td>
 					<form method="post" asp-action="Add" asp-controller="Book">
 						<button type="submit" class="btn btn-primary">

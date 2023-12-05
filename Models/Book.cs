@@ -9,7 +9,7 @@ namespace BookStoreApp.Models
         [Key]
         public string ISBN { get; set; }  // primary key
 
-        public int BookId { get; set; }  
+        public int BookId { get; set; }
         [Required]
         [StringLength(200)]
         public string Title { get; set; } // not nullable

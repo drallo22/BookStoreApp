@@ -1,0 +1,60 @@
+﻿@model Book
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Edit Book";   
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit" method="post">
+
+    <input asp-for="ISBN" type="hidden" />
+
+    <input asp-for="BookId" type="hidden" />
+    <input asp-for="AuthorId" type="hidden" />
+
+    
+        <div class="mb-3">
+            <label asp-for="Title" class="form-label"  for="Title"> Title </label>
+            <br/>
+            <input asp-for="Title" class="form-control" type="text" id="Title" name="Title" >
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Price" class="form-label"  for="Price"> Price </label>
+            <br/>
+            <input asp-for="Price" class="form-control" type="text" id="Price" name="Price">
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="authorObject.FirstName" class="form-label" for="FirstName"> FirstName </label>
+            <br />
+        <input asp-for="authorObject.FirstName" class="form-control" type="text" id="FirstName" name="FirstName">
+    </div>
+
+     <div class="mb-3">
+        <label asp-for="authorObject.LastName" class="form-label" for="LastName"> LastName </label>
+            <br />
+        <input asp-for="authorObject.LastName" class="form-control" type="text" id="LastName" name="LastName ">
+        </div>
+
+
+
+        </div>
+    <div class="mb-3">
+        <label asp-for="GenreId" class="form-label">Genre</label>
+        <select asp-for="GenreId" class="form-select">
+            <option value=@ViewBag.SelectedGenreByName>select a genre</option>
+            @foreach (Genre g in ViewBag.Genres)
+            {
+                <option value="@g.GenreId">@g.Name</option>
+            }
+        </select>
+    </div>
+
+
+    <!--<input type="hidden" asp-for="ISBN"/>-->
+        <button type="submit" class="btn btn-primary"> Update </button>
+        <a asp-controller="Book"  asp-action="Index" class="btn btn-primary"> Cancel </a>
+</form>
