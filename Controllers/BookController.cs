@@ -124,5 +124,30 @@ namespace BookStoreApp.Controllers
                 
                 return RedirectToAction("Index", "Books");*/
          }
+
+        [HttpGet]
+        public IActionResult Delete(String id)
+        {
+            var book = context.Books.Find(id);
+            return View(book);
         }
+
+        [HttpPost]
+        public IActionResult Delete(Book book)
+        {
+
+            if (book == null)
+            {
+                return NotFound();
+            }
+
+          
+
+            context.Books.Remove(book);
+
+            context.SaveChanges();
+
+            return RedirectToAction("Index", "Book");
+        }
+    }
        }

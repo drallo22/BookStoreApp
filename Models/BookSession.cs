@@ -6,8 +6,6 @@ namespace BookStoreApp.Models
     {
         private const string BooksKey = "mybooks";
         private const string CountKey = "bookcount";
-        private const string ConfKey = "conf";
-        private const string DivKey = "div";
 
 
         private ISession session { get; set; }

@@ -59,7 +59,7 @@ namespace BookStoreApp.Models
 				{
 					BookId = 4,
 					Title = "It",
-					ISBN = "0-670-81302-8",
+					ISBN = "978-0-670-81302-5",
 					GenreId = 4,
 					AuthorId = 1,
 					Price = 15.24
@@ -165,20 +165,13 @@ namespace BookStoreApp.Models
 				},
 
 
-
-
-
-
-
-
-
 				new Book
 				{
 					BookId = 16,
 					GenreId = 1,
 					AuthorId = 14,
 					Title = "To Kill a Mockingbird",
-					ISBN = "00000006",
+					ISBN = "978-0-385-03759-1",
 					Price = 10.99
 				},
 				new Book
@@ -187,7 +180,7 @@ namespace BookStoreApp.Models
 					GenreId = 3,
 					AuthorId = 15,
 					Title = "Romeo and Juliet",
-					ISBN = "00000007",
+					ISBN = "978-0-7432-4723-3",
 					Price = 16.99
 				},
 				new Book
@@ -196,7 +189,7 @@ namespace BookStoreApp.Models
 					GenreId = 4,
 					AuthorId = 16,
 					Title = "The Shining",
-					ISBN = "00000008",
+					ISBN = "978-0-385-12167-5",
 					Price = 35.78
 				},
 				new Book
@@ -205,7 +198,7 @@ namespace BookStoreApp.Models
 					GenreId = 6,
 					AuthorId = 17,
 					Title = "A People's History of the United States",
-					ISBN = "00000009",
+					ISBN = "978-0-06-083865-2",
 					Price = 24.09
 				},
 				new Book
@@ -214,7 +207,7 @@ namespace BookStoreApp.Models
 					GenreId = 2,
 					AuthorId = 18,
 					Title = "Dune",
-					ISBN = "00000010",
+					ISBN = "978-0-441-17271-9",
 					Price = 19.99
 				},
 				new Book
@@ -223,7 +216,7 @@ namespace BookStoreApp.Models
 					GenreId = 1,
 					AuthorId = 19,
 					Title = "Pride and Prejudice",
-					ISBN = "00000011",
+					ISBN = "978-0-14-143951-8",
 					Price = 12.99
 				},
 				new Book
@@ -232,7 +225,7 @@ namespace BookStoreApp.Models
 					GenreId = 3,
 					AuthorId = 15,
 					Title = "Hamlet",
-					ISBN = "00000012",
+					ISBN = "978-0-7434-7711-7",
 					Price = 50.89
 				},
 				new Book
@@ -241,7 +234,7 @@ namespace BookStoreApp.Models
 					GenreId = 4,
 					AuthorId = 20,
 					Title = "The Exorcist",
-					ISBN = "00000013",
+					ISBN = "978-0-06-100722-4",
 					Price = 14.99
 				},
 				new Book
@@ -250,7 +243,7 @@ namespace BookStoreApp.Models
 					GenreId = 6,
 					AuthorId = 21,
 					Title = "Sapiens: A Brief History of Humankind",
-					ISBN = "000000014",
+					ISBN = "978-0-06-231609-7",
 					Price = 15.99
 				},
 				new Book
@@ -259,7 +252,7 @@ namespace BookStoreApp.Models
 					GenreId = 2,
 					AuthorId = 22,
 					Title = "Neuromancer",
-					ISBN = "00000015",
+					ISBN = "978-0-441-27393-5",
 					Price = 21.25
 				},
 				new Book
@@ -268,7 +261,7 @@ namespace BookStoreApp.Models
 					GenreId = 1,
 					AuthorId = 23,
 					Title = "The Great Gatsby",
-					ISBN = "00000016",
+					ISBN = "978-0-7432-7356-5",
 					Price = 60.99
 				},
 				new Book
@@ -277,7 +270,7 @@ namespace BookStoreApp.Models
 					GenreId = 3,
 					AuthorId = 15,
 					Title = "Macbeth",
-					ISBN = "00000017",
+					ISBN = "978-0-7434-7710-0",
 					Price = 28
 				},
 				new Book
@@ -286,7 +279,7 @@ namespace BookStoreApp.Models
 					GenreId = 4,
 					AuthorId = 16,
 					Title = "It",
-					ISBN = "00000018",
+					ISBN = "978-1-5011-7952-9",
 					Price = 16.50
 				},
 				new Book
@@ -295,7 +288,7 @@ namespace BookStoreApp.Models
 					GenreId = 6,
 					AuthorId = 14,
 					Title = "The Wright Brothers",
-					ISBN = "00000019",
+					ISBN = "978-1-4767-2879-9",
 					Price = 32.99
 				},
 				new Book
@@ -304,7 +297,7 @@ namespace BookStoreApp.Models
 					GenreId = 2,
 					AuthorId = 15,
 					Title = "Foundation",
-					ISBN = "00000020",
+					ISBN = "978-0-553-29335-7",
 					Price = 13.99
 				},
 
@@ -312,41 +305,41 @@ namespace BookStoreApp.Models
 				{
 					BookId = 32,
 					Title = "The Lord of the Rings",
-					ISBN = "000092",
+					ISBN = "978-0-544-59257-7",
 					GenreId = 7,
 					AuthorId = 14,
 					Price = 14.99
 				},
 
-				 new Book
-				 {
-					 BookId = 33,
-					 Title = "The Silmarillion",
-					 ISBN = "000096",
-					 GenreId = 7,
-					 AuthorId = 14,
-					 Price = 17.99
-				 },
+				new Book
+				{
+					BookId = 33,
+					Title = "The Silmarillion",
+					ISBN = "978-0-544-29168-2",
+					GenreId = 7,
+					AuthorId = 14,
+					Price = 17.99
+				},
 
+				new Book
+				{
+					BookId = 34,
+					GenreId = 1,
+					AuthorId = 19,
+					Title = "Love in the Night",
+					ISBN = "978-0-385-33877-8",
+					Price = 18.99
+				},
+				new Book
+				{
+					BookId = 35,
+					GenreId = 1,
+					AuthorId = 23,
+					Title = "The Catcher in the Rye",
+					ISBN = "978-0-316-76948-0",
+					Price = 13.67
+				}
 
-				 new Book
-				 {
-					 BookId = 34,
-					 GenreId = 1,
-					 AuthorId = 19,
-					 Title = "Love in the Night",
-					 ISBN = "00000095",
-					 Price = 18.99
-				 },
-				 new Book
-				 {
-					 BookId = 35,
-					 GenreId = 1,
-					 AuthorId = 23,
-					 Title = "The Catcher in the Rye",
-					 ISBN = "00000097",
-					 Price = 13.67
-				 }
 
 			);
 

@@ -243,7 +243,7 @@ namespace BookStoreApp.Migrations
                         },
                         new
                         {
-                            ISBN = "0-670-81302-8",
+                            ISBN = "978-0-670-81302-5",
                             AuthorId = 1,
                             BookId = 4,
                             GenreId = 4,
@@ -351,7 +351,7 @@ namespace BookStoreApp.Migrations
                         },
                         new
                         {
-                            ISBN = "00000006",
+                            ISBN = "978-0-385-03759-1",
                             AuthorId = 14,
                             BookId = 16,
                             GenreId = 1,
@@ -360,7 +360,7 @@ namespace BookStoreApp.Migrations
                         },
                         new
                         {
-                            ISBN = "00000007",
+                            ISBN = "978-0-7432-4723-3",
                             AuthorId = 15,
                             BookId = 17,
                             GenreId = 3,
@@ -369,7 +369,7 @@ namespace BookStoreApp.Migrations
                         },
                         new
                         {
-                            ISBN = "00000008",
+                            ISBN = "978-0-385-12167-5",
                             AuthorId = 16,
                             BookId = 18,
                             GenreId = 4,
@@ -378,7 +378,7 @@ namespace BookStoreApp.Migrations
                         },
                         new
                         {
-                            ISBN = "00000009",
+                            ISBN = "978-0-06-083865-2",
                             AuthorId = 17,
                             BookId = 19,
                             GenreId = 6,
@@ -387,7 +387,7 @@ namespace BookStoreApp.Migrations
                         },
                         new
                         {
-                            ISBN = "00000010",
+                            ISBN = "978-0-441-17271-9",
                             AuthorId = 18,
                             BookId = 20,
                             GenreId = 2,
@@ -396,7 +396,7 @@ namespace BookStoreApp.Migrations
                         },
                         new
                         {
-                            ISBN = "00000011",
+                            ISBN = "978-0-14-143951-8",
                             AuthorId = 19,
                             BookId = 11,
                             GenreId = 1,
@@ -405,7 +405,7 @@ namespace BookStoreApp.Migrations
                         },
                         new
                         {
-                            ISBN = "00000012",
+                            ISBN = "978-0-7434-7711-7",
                             AuthorId = 15,
                             BookId = 22,
                             GenreId = 3,
@@ -414,7 +414,7 @@ namespace BookStoreApp.Migrations
                         },
                         new
                         {
-                            ISBN = "00000013",
+                            ISBN = "978-0-06-100722-4",
                             AuthorId = 20,
                             BookId = 23,
                             GenreId = 4,
@@ -423,7 +423,7 @@ namespace BookStoreApp.Migrations
                         },
                         new
                         {
-                            ISBN = "000000014",
+                            ISBN = "978-0-06-231609-7",
                             AuthorId = 21,
                             BookId = 24,
                             GenreId = 6,
@@ -432,7 +432,7 @@ namespace BookStoreApp.Migrations
                         },
                         new
                         {
-                            ISBN = "00000015",
+                            ISBN = "978-0-441-27393-5",
                             AuthorId = 22,
                             BookId = 25,
                             GenreId = 2,
@@ -441,7 +441,7 @@ namespace BookStoreApp.Migrations
                         },
                         new
                         {
-                            ISBN = "00000016",
+                            ISBN = "978-0-7432-7356-5",
                             AuthorId = 23,
                             BookId = 26,
                             GenreId = 1,
@@ -450,7 +450,7 @@ namespace BookStoreApp.Migrations
                         },
                         new
                         {
-                            ISBN = "00000017",
+                            ISBN = "978-0-7434-7710-0",
                             AuthorId = 15,
                             BookId = 27,
                             GenreId = 3,
@@ -459,7 +459,7 @@ namespace BookStoreApp.Migrations
                         },
                         new
                         {
-                            ISBN = "00000018",
+                            ISBN = "978-1-5011-7952-9",
                             AuthorId = 16,
                             BookId = 28,
                             GenreId = 4,
@@ -468,7 +468,7 @@ namespace BookStoreApp.Migrations
                         },
                         new
                         {
-                            ISBN = "00000019",
+                            ISBN = "978-1-4767-2879-9",
                             AuthorId = 14,
                             BookId = 29,
                             GenreId = 6,
@@ -477,7 +477,7 @@ namespace BookStoreApp.Migrations
                         },
                         new
                         {
-                            ISBN = "00000020",
+                            ISBN = "978-0-553-29335-7",
                             AuthorId = 15,
                             BookId = 30,
                             GenreId = 2,
@@ -486,7 +486,7 @@ namespace BookStoreApp.Migrations
                         },
                         new
                         {
-                            ISBN = "000092",
+                            ISBN = "978-0-544-59257-7",
                             AuthorId = 14,
                             BookId = 32,
                             GenreId = 7,
@@ -495,7 +495,7 @@ namespace BookStoreApp.Migrations
                         },
                         new
                         {
-                            ISBN = "000096",
+                            ISBN = "978-0-544-29168-2",
                             AuthorId = 14,
                             BookId = 33,
                             GenreId = 7,
@@ -504,7 +504,7 @@ namespace BookStoreApp.Migrations
                         },
                         new
                         {
-                            ISBN = "00000095",
+                            ISBN = "978-0-385-33877-8",
                             AuthorId = 19,
                             BookId = 34,
                             GenreId = 1,
@@ -513,7 +513,7 @@ namespace BookStoreApp.Migrations
                         },
                         new
                         {
-                            ISBN = "00000097",
+                            ISBN = "978-0-316-76948-0",
                             AuthorId = 23,
                             BookId = 35,
                             GenreId = 1,

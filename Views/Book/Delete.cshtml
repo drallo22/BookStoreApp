@@ -1,0 +1,35 @@
+﻿@model Book
+@{
+	ViewData["Title"] = "Delete";
+}
+
+<h1>Delete Book?</h1>
+<form asp-action="Delete" method="post" >
+	<input type="hidden" asp-for="ISBN" />
+
+	<div asp-validation-summary="All" class="text-danger"></div>
+
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr class="text-white bg-dark">
+				<th>Title</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			
+				<tr>
+					<td>@Model.Title</td>
+				</tr>
+			
+		</tbody>
+	</table>
+
+	<button type="submit" class="btn btn-primary">Confirm Delete</button>
+
+	<a asp-controller="Book" asp-action="Index"
+	   class="btn btn-primary">Cancel</a>
+</form>
+
+
+
