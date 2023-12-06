@@ -43,12 +43,7 @@ namespace BookStoreApp.Controllers
 
 			return View(viewModel);
         }
-        [HttpPost]
-        public IActionResult Add(BookViewModel model)
-        {
-            TempData["message"] = $"{model.Book.Title} has been added in the cart";
-            return RedirectToAction("Index", "Book");
-        }
+     
 
         [HttpGet]
         public IActionResult Edit(string id)

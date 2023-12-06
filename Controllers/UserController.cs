@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using BookStoreApp.Models;
 using System.Data;
 
-
+[Authorize]
 public class UserController : Controller
 {
     private UserManager<User> userManager;

@@ -1,9 +1,11 @@
 ﻿using BookStoreApp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
 namespace BookStoreApp.Controllers
 {
+    [Authorize]
     public class CartController : Controller
     {
         private BookstoreContext context;
